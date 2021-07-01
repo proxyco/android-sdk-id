@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_height">72dp</dimen>
+    <dimen name="event_row_height">64dp</dimen>
+    <dimen name="row_left_margin">8dp</dimen>
+    <dimen name="row_right_margin">8dp</dimen>
+    <dimen name="row_top_margin">8dp</dimen>
+    <dimen name="event_row_right_margin">16dp</dimen>
+    <dimen name="recycler_margin">8dp</dimen>
+
+    <dimen name="row_title_text_size">16sp</dimen>
+    <dimen name="row_subtitle_text_size">12sp</dimen>
+    <dimen name="row_image_size">56dp</dimen>
+
+    <dimen name="event_row_title_text_size">14sp</dimen>
+    <dimen name="event_row_subtitle_text_size">11sp</dimen>
+
+    <dimen name="default_corner_radius">8dp</dimen>
+    <dimen name="settings_option_height">72dp</dimen>
+    <dimen name="settings_left_margin">16dp</dimen>
+    <dimen name="settings_right_margin">16dp</dimen>
+</resources>

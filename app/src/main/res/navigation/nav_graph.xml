@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="co.proxy.sdk.example.ui.login.LoginFragment"
+        android:label="Login fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/main_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="co.proxy.sdk.example.ui.main.MainFragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_main">
+    </fragment>
+
+    <fragment
+        android:id="@+id/manual_unlock_fragment"
+        android:name="co.proxy.sdk.example.ui.manualUnlock.ManualUnlockFragment"
+        android:label="Manual Unlock Fragment"
+        tools:layout="@layout/fragment_manual_unlock">
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="co.proxy.sdk.example.ui.settings.SettingsFragment"
+        android:label="Settings Fragment"
+        tools:layout="@layout/settings_fragment">
+        <action
+            android:id="@+id/action_settingsFragment_to_LoginFragment"
+            app:destination="@id/login_fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+</navigation>

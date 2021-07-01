@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">#40ffffff</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_proxy_logo</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="RowTitleText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/row_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black70</item>
+    </style>
+
+    <style name="RowSubtitleText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/row_subtitle_text_size</item>
+        <item name="android:textColor">@color/black38</item>
+    </style>
+
+    <style name="EventRowTitleText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/event_row_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black70</item>
+    </style>
+
+    <style name="EventRowSubtitleText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/event_row_subtitle_text_size</item>
+        <item name="android:textColor">@color/black38</item>
+    </style>
+
+</resources>
