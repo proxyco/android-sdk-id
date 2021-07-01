@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1002181684910",
+    "firebase_url": "https://proxy-sdk-example.firebaseio.com",
+    "project_id": "proxy-sdk-example",
+    "storage_bucket": "proxy-sdk-example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002181684910:android:2d629fbeeb161565d2073f",
+        "android_client_info": {
+          "package_name": "co.proxy.sdk.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002181684910-obiqp0h4j25q5edbqiu7lfjiueed5405.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLHg3tP3G_QUe7v96d2PhQjPgehuG3fGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002181684910-obiqp0h4j25q5edbqiu7lfjiueed5405.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/event_row_height"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_event_row_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/proxy_red"
+        android:contentDescription="Image"
+        android:padding="8dp"
+        android:layout_margin="12dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/ic_bluetooth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_event_name"
+        style="@style/EventRowTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_event_desc"
+        app:layout_constraintStart_toEndOf="@id/iv_event_row_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Event name" />
+
+    <TextView
+        android:id="@+id/tv_event_desc"
+        style="@style/EventRowSubtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_event_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+        tools:text="1231-2312-1231-212" />
+
+    <include
+        android:id="@+id/cv_signal"
+        layout="@layout/signal_strength_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/event_row_right_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

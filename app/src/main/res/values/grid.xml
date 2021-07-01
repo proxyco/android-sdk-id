@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_half">4dp</dimen>
+    <dimen name="grid_1">8dp</dimen>
+    <dimen name="grid_2">16dp</dimen>
+    <dimen name="grid_3">24dp</dimen>
+    <dimen name="grid_4">32dp</dimen>
+    <dimen name="grid_5">40dp</dimen>
+    <dimen name="grid_6">48dp</dimen>
+    <dimen name="grid_7">56dp</dimen>
+    <dimen name="grid_8">64dp</dimen>
+    <dimen name="grid_9">72dp</dimen>
+    <dimen name="grid_10">80dp</dimen>
+    <dimen name="grid_11">88dp</dimen>
+    <dimen name="grid_12">96dp</dimen>
+    <dimen name="grid_13">104dp</dimen>
+    <dimen name="grid_14">112dp</dimen>
+    <dimen name="grid_15">120dp</dimen>
+    <dimen name="grid_16">128dp</dimen>
+    <dimen name="grid_17">136dp</dimen>
+    <dimen name="grid_18">144dp</dimen>
+    <dimen name="grid_19">152dp</dimen>
+    <dimen name="grid_20">160dp</dimen>
+    <dimen name="grid_21">168dp</dimen>
+    <dimen name="grid_22">176dp</dimen>
+    <dimen name="grid_23">184dp</dimen>
+    <dimen name="grid_24">192dp</dimen>
+    <dimen name="grid_25">200dp</dimen>
+    <dimen name="grid_26">208dp</dimen>
+    <dimen name="grid_27">216dp</dimen>
+    <dimen name="grid_28">224dp</dimen>
+    <dimen name="grid_29">232dp</dimen>
+    <dimen name="grid_30">240dp</dimen>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_height"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_row_image"
+        android:layout_width="@dimen/row_image_size"
+        android:layout_height="@dimen/row_image_size"
+        android:layout_marginStart="@dimen/row_left_margin"
+        android:background="@drawable/bg_row_image_radius_grey"
+        android:contentDescription="Image"
+        android:padding="16dp"
+        android:src="@drawable/ic_proxy_device"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_presence_name"
+        style="@style/RowTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_presence_id"
+        app:layout_constraintStart_toEndOf="@id/iv_row_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="PresenceId" />
+
+    <TextView
+        android:id="@+id/tv_presence_id"
+        style="@style/RowSubtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_presence_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_presence_name"
+        tools:text="1231-2312-1231-212" />
+
+    <include
+        android:id="@+id/cv_signal"
+        layout="@layout/signal_strength_layout"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="@dimen/row_right_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
