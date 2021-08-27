@@ -9,27 +9,36 @@ This repository contains an application that illustrates the basic usage of the 
 -   Gradle 6.3
 -   Gradle Plugin for Android 4.0.1
 
+## Quick Start
+An example project is included with Proxy Mobile SDK for Android. This example demonstrates how to authenticate a user to the Proxy service and enable the Proxy signal within your app.
+
 ## Setup
 
 ### Step  1:  Add dependencies
-Add these repositories to your top-level (project) `build.gradle` file (contact Proxy for Jitpack authToken):
+Add these repositories to your top-level (project) build.gradle file (Request maven credentials from the Proxy Team):
 ```
 allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'https://jitpack.io'
-		        credentials { username authToken }
-        }
+        maven { 
+               url 'https://proxyco.jfrog.io/proxyco/android-apps'
+               credentials {
+                      username = 'USERNAME'
+                      password = 'PASSWORD'
+               }
     }
 }
 ```
 
 Add this to the `dependencies{}` section of your module-level (app) `build.gradle` file:
 ```
-implementation ('com.github.proxyco:android:sdk:{release version}')
+implementation ('co.proxy:android-sdk:1.9.0')
 ```
-
+For users in Mainland China:
+```
+implementation ('co.proxy:android-sdk-cn:1.9.0')
+```
 Add to the `android{}` section:
 ```
 compileOptions {
@@ -123,7 +132,6 @@ ProxySDKConfig config = new ProxySDKConfig.Builder()
   .setAppId(getString(R.string.app_id))
   .setClientId(getString(R.string.client_id))
   .setDefaultNotificationInfo(notificationInfo)
-  .setNearByEnabled(false)
   .build();
 ```
 Client ID is a unique identifier for your application, [get yours here](https://docs.proxy.com/your-apps).
@@ -293,7 +301,6 @@ Error codes reported to listeners:
 -   `22`: Generic error, something unexpected went wrong.
 -   `23`: Location permission is denied.
 -   `24`: Location Services permission is denied.
--   `152`: User does not have the permission to access the scanned device.
 
 You can also register a listener for the BLE client through the Proxy SDK. To do so, instantiate a `RxBleClientStateListener` and call:
 
@@ -310,4 +317,3 @@ Possible values reported in  `RxBleClientStateListener.onStateChanged`  are:
 -   `LOCATION_PERMISSION_NOT_GRANTED`: Location permissions have not been granted for the app.
 -   `LOCATION_SERVICES_NOT_ENABLED`: Location Services are disabled on this device.
 -   `READY`: BLE client is operational.
-
