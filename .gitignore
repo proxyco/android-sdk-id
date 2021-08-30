@@ -2,3 +2,4 @@
 /build/
 /local.properties
 /.gradle/
+app/src/staging/res/values/strings.xml
