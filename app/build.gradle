@@ -84,6 +84,9 @@ android {
     dexOptions {
         preDexLibraries true
     }
+    lintOptions {
+        checkReleaseBuilds false
+    }
 }
 
 dependencies {
@@ -117,7 +120,8 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
     //ProxySDK
-    implementation 'com.github.proxyco.android:sdk:16ebd1cce9'
+    worldImplementation 'co.proxy:android-sdk:1.9.0'
+    chinaImplementation 'co.proxy:android-sdk-cn:1.9.0'
 
     //Images
     implementation "com.github.bumptech.glide:glide:$glide_version"
@@ -141,4 +145,8 @@ dependencies {
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.6.2')
     testImplementation('io.mockk:mockk:1.10.0')
+}
+
+hilt {
+    enableExperimentalClasspathAggregation = true
 }

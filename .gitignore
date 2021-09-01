@@ -3,3 +3,7 @@
 /local.properties
 /.gradle/
 app/src/staging/res/values/strings.xml
+app/src/staging/proxy-sdk-example-staging-credentials.json
+app/src/staging/google-services.json
+app/proxy-sdk-example-production-credentials.json
+app/google-services.json

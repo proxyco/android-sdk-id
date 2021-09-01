@@ -4,9 +4,7 @@ import co.proxy.sdk.api.Presence
 import co.proxy.sdk.example.data.model.ProxySampleEvent
 import co.proxy.sdk.services.BaseService
 import co.proxy.sdk.services.BleScannerServiceListener
-import co.proxy.sdk.services.NearByKitMessage
 import co.proxy.sdk.services.ProxyOperation
-import java.util.*
 
 class BleScannerServiceListenerAdapter(
     private val onEventDetected: (ProxySampleEvent) -> Unit
@@ -42,18 +40,11 @@ class BleScannerServiceListenerAdapter(
         onEventDetected(ProxySampleEvent.ScannerError(rawErrorCode))
     }
 
-    override fun onNearByKitMessage(p0: NearByKitMessage<*>) {
-
-    }
-
     override fun onScannerEvent(p0: Presence?, p1: ProxyOperation.OperationEvent?, p2: String?) {
         p1?.let { event ->
             p0?.let {
                 onEventDetected(ProxySampleEvent.PresenceEvent(event, it))
             }
         }
-    }
-
-    override fun onContactUpdate(p0: HashMap<String, String>?) {
     }
 }
