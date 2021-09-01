@@ -48,7 +48,6 @@ class ProxySampleApp : Application() {
             .setFileLogUploadingUsers(getRemoteConfigUsers())
             .setDebugNotifications(true)
             .setUnlockAutoDisabled(false)
-            .setNearByEnabled(false)
             .setEnv(env)
             .setUITheme(uiTheme)
             .build()

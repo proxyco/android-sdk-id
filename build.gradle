@@ -44,8 +44,11 @@ allprojects {
         google()
         jcenter()
         maven {
-            url 'https://jitpack.io'
-            credentials { username authToken }
+            url 'https://proxyco.jfrog.io/proxyco/android-apps'
+            credentials {
+                username = 'USERNAME'
+                password = 'PASSWORD'
+            }
         }
     }
 }
