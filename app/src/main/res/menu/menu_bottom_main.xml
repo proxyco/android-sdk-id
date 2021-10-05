@@ -10,6 +10,10 @@
         android:icon="@drawable/ic_dialpad_24"
         android:title="@string/snackbar_manual_unlock_action" />
     <item
+        android:id="@+id/access_card_fragment"
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"
+        android:title="@string/snackbar_user" />
+    <item
         android:id="@+id/settings_fragment"
         android:icon="@drawable/ic_settings_24"
         android:title="@string/settings_menu_title" />

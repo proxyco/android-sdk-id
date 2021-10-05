@@ -34,6 +34,13 @@
     </fragment>
 
     <fragment
+        android:id="@+id/access_card_fragment"
+        android:name="co.proxy.sdk.example.ui.user.UserFragment"
+        android:label="Cards Fragment"
+        tools:layout="@layout/fragment_user">
+    </fragment>
+
+    <fragment
         android:id="@+id/settings_fragment"
         android:name="co.proxy.sdk.example.ui.settings.SettingsFragment"
         android:label="Settings Fragment"

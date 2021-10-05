@@ -52,6 +52,7 @@ A log file is attached to help us diagnose any issues you may be having.\n\n
     <string name="main_loging_screen" translatable="false">Log</string>
     <string name="snackbar_permissions_action" translatable="false">Permissions</string>
     <string name="snackbar_manual_unlock_action" translatable="false">Manual Unlock</string>
+    <string name="snackbar_user" translatable="false">User</string>
     <string name="action_logout" translatable="false">Sign Out</string>
     <string name="logout_title" translatable="false">Confirm Sign Out</string>
     <string name="logout_message" translatable="false">Do you really want to sign out?</string>
@@ -62,11 +63,20 @@ A log file is attached to help us diagnose any issues you may be having.\n\n
     <string name="refresh_presence_list" translatable="false">Refresh List</string>
     <string name="manual_unlock_instructions" translatable="false">Detecting devices. Tap any reader below to send a manual unlock token.</string>
     <string name="main_title" translatable="false">Events</string>
+    <string name="user_title" translatable="false">User</string>
+    <string name="fetch_user_button_title" translatable="false">Fetch Remote User</string>
+    <string name="user_name_label" translatable="false">Name:</string>
+    <string name="user_id_label" translatable="false">ID:</string>
+    <string name="user_card_size_label" translatable="false">Cards:</string>
+    <string name="user_email_label" translatable="false">Email:</string>
     <string name="settings_menu_title" translatable="false">Settings</string>
     <string name="permissions_row_title" translatable="false">Request permissions</string>
     <string name="permissions_row_desc">This option will trigger permission request from the SDK</string>
     <string name="logout_row_title">Logout</string>
     <string name="logout_row_desc">You will be logged out and services will be disconnected</string>
     <string name="feedback_row_title">Send feedback</string>
-    <string name="feedback_row_desc">"Send us feeback to help improving our SDK "</string>
+    <string name="feedback_row_desc">"Send us feeback to help improving our SDK"</string>
+    <string name="fetch_user_toast_success">"Fetch Success!"</string>
+    <string name="fetch_user_toast_failure">"Fetch Failure."</string>
+    <string name="fetch_user_toast">"Fetching..."</string>
 </resources>

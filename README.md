@@ -33,11 +33,11 @@ allprojects {
 
 Add this to the `dependencies{}` section of your module-level (app) `build.gradle` file:
 ```
-implementation ('co.proxy:android-sdk:1.9.0')
+implementation ('co.proxy:android-sdk:1.9.2')
 ```
 For users in Mainland China:
 ```
-implementation ('co.proxy:android-sdk-cn:1.9.0')
+implementation ('co.proxy:android-sdk-cn:1.9.2')
 ```
 Add to the `android{}` section:
 ```

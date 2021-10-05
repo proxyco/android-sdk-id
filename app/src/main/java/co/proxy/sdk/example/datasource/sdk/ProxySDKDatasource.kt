@@ -4,12 +4,15 @@ import android.content.Context
 import android.nfc.NfcAdapter
 import co.proxy.sdk.ProxySDK
 import co.proxy.sdk.api.Command
+import co.proxy.sdk.api.User
 import co.proxy.sdk.api.http.ApiCallback
 import co.proxy.sdk.example.data.model.ProxySampleEvent
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 import timber.log.Timber
 import javax.inject.Singleton
+import kotlin.coroutines.resume
+import kotlin.coroutines.suspendCoroutine
 
 @Singleton
 class ProxySDKDatasourceImp(
@@ -91,6 +94,23 @@ class ProxySDKDatasourceImp(
         ProxySDK.stopBleServices(context)
     }
 
+    override suspend fun getUserWithLegacyCard(): SdkResult<User, Throwable> {
+        return try {
+            suspendCoroutine { continuation ->
+                ProxySDK.getUserWithLegacyCard(object : ApiCallback<User> {
+                    override fun onSuccess(user: User) {
+                        continuation.resume(SdkResult.Success(user))
+                    }
+
+                    override fun onFailure(t: Throwable) {
+                        continuation.resume(SdkResult.Error(t))
+                    }
+                })
+            }
+        } catch (e: Exception) {
+            SdkResult.Error(e)
+        }
+    }
 }
 
 interface ProxySDKDatasource {
@@ -103,10 +123,16 @@ interface ProxySDKDatasource {
     suspend fun isScannerRunning(): Boolean
     suspend fun isAdvertiserEnabled(): Boolean
     suspend fun isNFCEnabled(): Boolean
+    suspend fun getUserWithLegacyCard(): SdkResult<User, Throwable>
 }
 
 interface ProxyBleServiceBinder {
     fun startServices()
     fun unbindServices()
     fun stopServices()
+}
+
+sealed class SdkResult<T : Any, E : Throwable> {
+    data class Success<T : Any, E : Throwable>(val value: T) : SdkResult<T, E>()
+    data class Error<T : Any, E : Throwable>(val e: E) : SdkResult<T, E>()
 }

@@ -21,7 +21,6 @@ class PresenceAdapter(
         holder.bind(getItem(position))
     }
 
-
     inner class PresenceViewHolder(private val view: PresenceRowBinding) : RecyclerView.ViewHolder(view.root) {
         fun bind(presence: Presence) {
             with(view) {

@@ -47,4 +47,7 @@ class BleScannerServiceListenerAdapter(
             }
         }
     }
+
+    // Used for Proxy debugging only
+    override fun onDiagnosticLog(log: String?) { }
 }
