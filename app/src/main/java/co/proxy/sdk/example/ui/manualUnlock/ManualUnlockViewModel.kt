@@ -31,7 +31,7 @@ class ManualUnlockViewModel @Inject constructor(
                 readerRepository.getPresenceListFlow()
                     .flowOn(Dispatchers.IO)
                     .collect {
-                        emit(it)
+                        emit(it.sortedBy { presence -> presence.name() })
                     }
             }
         }

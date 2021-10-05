@@ -2,19 +2,11 @@ package co.proxy.sdk.example.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import co.proxy.sdk.example.R
 import co.proxy.sdk.example.databinding.ActivityMainBinding
 import co.proxy.sdk.example.datasource.sdk.ProxyBleServiceBinder
-import co.proxy.sdk.example.datasource.sdk.ProxySDKDatasource
 import co.proxy.sdk.example.ui.extensions.gone
 import co.proxy.sdk.example.ui.extensions.visible
 import dagger.hilt.android.AndroidEntryPoint

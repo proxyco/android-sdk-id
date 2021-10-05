@@ -10,7 +10,7 @@ plugins {
     id 'com.google.firebase.appdistribution'
 }
 
-def baseVersion = "1.30.9"
+def baseVersion = "1.31.0"
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -120,8 +120,8 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
     //ProxySDK
-    worldImplementation 'co.proxy:android-sdk:1.9.0'
-    chinaImplementation 'co.proxy:android-sdk-cn:1.9.0'
+    worldImplementation 'co.proxy:android-sdk:1.9.2'
+    chinaImplementation 'co.proxy:android-sdk-cn:1.9.2'
 
     //Images
     implementation "com.github.bumptech.glide:glide:$glide_version"

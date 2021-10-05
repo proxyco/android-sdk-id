@@ -1,1 +1,0 @@
-Upgrade to SDK 1.8.12 (Client-Signed Token + Pre-Fetch Tokens + Identity Endpoint)
